@@ -10,6 +10,7 @@ p, #nav *, h2, label, #contact-form .label {font-family: 'Roboto', sans-serif; f
 :root {
     --backgroud : #F0F0F0;
     --tonique : #489D73;
+    --green-back : #eaf7f1;
 }
 
 html, body {
@@ -45,6 +46,10 @@ h3 {
     flex-direction: row;
     justify-content: space-around;
     margin: 60px 20% 100px 20%;
+}
+
+#nav li {
+    text-align: center;
 }
 
 #nav li a {
@@ -96,12 +101,12 @@ strong {
 }
 
 #contact-form {
-    background-color: #eaf7f1;
+    background-color: var(--green-back);
     text-align: center;
 }
 
 #contact-form .label {
-    margin: 20px auto;
+    margin: 20px auto 0 auto;
     width: 70vw;
     padding: 10px;
     border-radius: 20px;
@@ -110,7 +115,7 @@ strong {
 }
 
 .g-recaptcha {
-    margin: 0 auto;
+    margin: 20px auto;
     text-align: center;
     display: inline-block;
 }
@@ -131,4 +136,29 @@ strong {
 .submit:hover {
     box-shadow: 5px 5px 5px #999;
     cursor: pointer;
+}
+
+#footer {
+    background-color: var(--green-back);
+    margin: 80px 0 0 0;
+    padding: 40px 0;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    #nav {
+        margin: 60px 0 100px 0;
+    }
+    #nav li {
+        margin: 60
+    }
+    #nav li a {
+        padding: 40px 20px;
+    }
 }
