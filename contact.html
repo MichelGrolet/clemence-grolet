@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Clémence Grolet - Contact</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+<!-- HEADER -->
+<h1><a href="index.html">Clémence Grolet</a></h1>
+<h2>Art-thérapeute à Lyon et ses environs</h2>
+
+<ul id="nav">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="ateliers.html">Les ateliers</a></li>
+    <li><a href="parcours.html">Mon parcours</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+<!------------>
+<script type="text/javascript">
+    (function() {
+        emailjs.init("user_JnPMoqEV8wS1KZOulPx6j");
+    })();
+</script>
+
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = Math.random() * 100000 | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm('clemence.grolet.service', 'clemence.grolet.template', this)
+                .then(function() {
+                    console.log('email envoyé !');
+                }, function(error) {
+                    console.log("erreur d'envoi du mail : ", error);
+                });
+        });
+    }
+</script>
+
+<form id="contact-form">
+    <input type="hidden" name="contact_number">
+    <label>Name</label>
+    <input type="text" name="user_name">
+    <label>Email</label>
+    <input type="email" name="user_email">
+    <label>Message</label>
+    <textarea name="message"></textarea>
+    <input data-sitekey="6LceXl4bAAAAAG9rAAc_D6eOjrBYxjYFAkSpNRMj" type="submit" value="Send">
+</form>
+
+</body>
+</html>
+
