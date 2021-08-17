@@ -40,6 +40,10 @@ h3 {
     text-align: center !important;
 }
 
+#h3contact {
+    font-weight: 700;
+}
+
 #nav {
     list-style-type: none;
     display: flex;
@@ -122,6 +126,7 @@ strong {
     border-radius: 20px;
     border: none;
     font-size: .9rem;
+    resize: none;
 }
 
 .g-recaptcha {
@@ -144,6 +149,7 @@ strong {
 
 .submit:hover {
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 #footer {
