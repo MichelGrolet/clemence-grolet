@@ -46,6 +46,7 @@ h3 {
     flex-direction: row;
     justify-content: space-around;
     margin: 60px 20% 100px 20%;
+    padding: 0;
 }
 
 #nav li {
@@ -72,7 +73,9 @@ h4.section {
 
 p {
     margin: 0 5%;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    hyphens: auto;
+    text-align: justify;
 }
 
 #image-main {
@@ -162,11 +165,8 @@ strong {
     #nav {
         margin: 60px 0 100px 0;
     }
-    #nav li {
-        margin: 60
-    }
     #nav li a {
-        padding: 40px 20px;
+        padding: 40px 0px;
     }
     img#image-avatar {
         float: none;
