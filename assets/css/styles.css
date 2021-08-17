@@ -9,8 +9,8 @@ p, #nav *, h2, label, #contact-form .label {font-family: 'Roboto', sans-serif; f
 
 :root {
     --backgroud : #F0F0F0;
-    --tonique : #489D73;
-    --green-back : #eaf7f1;
+    --tonique : #D8A355;
+    --green-back : #ffd073;
 }
 
 html, body {
@@ -37,7 +37,7 @@ h2 {
 
 h3 {
     font-size: 3rem;
-    margin-left: 1%;
+    text-align: center !important;
 }
 
 #nav {
@@ -58,21 +58,21 @@ h3 {
 }
 
 #nav li a:hover {
-    text-decoration: none;
     color: var(--tonique);
+    text-decoration: underline;
+    transition: all .4s;
 }
 
-.section {
+h4.section {
     font-size: 2rem;
     font-weight: 700;
-    margin-top: 30px;
-    display: inline-block;
-    margin-left: 1%;
+    margin: 30px auto 50px auto;
+    text-align: center !important;
 }
 
 p {
-    margin-left: 1%;
-    font-size: 1.2rem;
+    margin: 0 5%;
+    font-size: 1.3rem;
 }
 
 #image-main {
@@ -84,6 +84,10 @@ p {
     float: left;
     border-radius: 50%;
     margin: 10px 40px;
+}
+
+#image-atelier {
+    width: 100vw;
 }
 
 a {
@@ -103,6 +107,9 @@ strong {
 #contact-form {
     background-color: var(--green-back);
     text-align: center;
+    margin: 0 8%;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 #contact-form .label {
@@ -139,8 +146,8 @@ strong {
 }
 
 #footer {
-    background-color: var(--green-back);
-    margin: 80px 0 0 0;
+    border-top: 1px solid black;
+    margin: 80px 20px 0 20px;
     padding: 40px 0;
     text-align: center;
 }
@@ -160,5 +167,12 @@ strong {
     }
     #nav li a {
         padding: 40px 20px;
+    }
+    img#image-avatar {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 70px;
     }
 }
